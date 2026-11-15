@@ -1,28 +1,28 @@
-# LICS — Flow Zoometry 🪰🔬
+# LICS — Flow zoometry control
 
-**LICS** is the LabVIEW control software for the **Flow Zoometry** platform — a flow-based imaging system for whole *Drosophila* larvae.
+**LICS** is the LabVIEW-based control software for **flow zoometry** — a flow-based 3D fluorescence imaging system for whole *Drosophila* larvae.
 
-Larvae are transported through a fluidic channel, detected on the fly by a laser / photodetector trigger, scanned with a Hamamatsu camera, and saved as `.dcimg` image stacks. The acquired images feed into the downstream [**FlySeg**](https://github.com/Chase-hucl/Flyseg) segmentation pipeline.
+Larvae are transported through a fluidic channel, detected by a laser & photodetector trigger, fluorescence imaged in 3D using with a camera, and saved as `.dcimg` image stacks. The acquired images feed into a segmentation pipeline.
 
-The application is a single-loop **state machine** (`fly dominator.vi`) coordinating the camera, motorized stage, flow pumps, laser, and data acquisition hardware.
-
----
-
-## ✨ Features
-
-- ✅ Real-time larva detection via laser / photodetector threshold triggering
-- ✅ **Edge-hunting**: automatic localization of larva boundaries before a scan
-- ✅ Acquisition on a Hamamatsu DCAM camera → `.dcimg` output
-- ✅ Synchronized control of stage, flow pumps, laser, and camera through one state machine
-- ✅ Automatic per-larva imaging, saving
-- ✅ Live particle analysis (centroid, size, Feret diameter) for boundary finding
-- ✅ Multi-flow control (sheath / sample / shower / jet)
-- ✅ Email notification on experiment information via SMTP
-- ✅ Output naming compatible with the FlySeg preprocessing pipeline
+The application is a single-loop **state machine** (`fly dominator.vi`) coordinating various hardware such as the camera, motorized stage, flow pumps, laser, and data acquisition hardware.
 
 ---
 
-## 🧰 Requirements
+## Features
+
+- Sample detection via laser & photodetector trigger
+- **Edge-hunting**: automatic localization of larva boundaries before imaging
+- Acquisition via a Hamamatsu DCAM camera → `.dcimg` output
+- Synchronized control of stage, flow pumps, laser, and camera
+- Automatic per-larva imaging, saving
+- Live particle analysis (centroid, size, Feret diameter) for boundary finding
+- Multi-flow control (sheath / sample / shower / jet)
+- Email notification on experiment information via SMTP
+- Output naming compatible with the FlySeg preprocessing pipeline
+
+---
+
+## Requirements
 
 ### Software
 - **LabVIEW 2021** (project saved as v21.0) — Windows
@@ -37,12 +37,12 @@ The application is a single-loop **state machine** (`fly dominator.vi`) coordina
 - NI multifunction DAQ device (referenced in the project as **`Dev1`**)
 - Thorlabs Kinesis benchtop stepper controller (motorized filter wheel)
 - Motorized stepper stage (controlled over an RS-232 serial connection, `COM4`)
-- Flow pumps driven through the DAQ digital lines (see channel map)
-- 405 nm laser + photodetector for the trigger line
+- Flow pumps driven via DAQ digital signals & MOSFET w/ PSU (see channel map)
+- Laser + photodetector for the trigger line
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 1. **Install** all drivers above, then confirm hardware names match the project:
    - DAQ device enumerates as `Dev1` in NI MAX
@@ -57,7 +57,7 @@ The application is a single-loop **state machine** (`fly dominator.vi`) coordina
 
 ---
 
-## 🕹️ Main VIs
+## Main VIs
 
 | VI | Role |
 |----|------|
@@ -69,7 +69,7 @@ The application is a single-loop **state machine** (`fly dominator.vi`) coordina
 
 ---
 
-## 🔌 DAQ Channel Map (`Dev1`)
+## DAQ Channel Map (`Dev1`)
 
 Digital output line assignments, transcribed from the front-panel labels:
 
@@ -98,7 +98,7 @@ Digital output line assignments, transcribed from the front-panel labels:
 
 ---
 
-## 📂 Output
+## Output
 
 - Image stacks saved as **`.dcimg`** in the configured **Save directory**
 - Filenames built by `name.vi` from `Save base file name` + running index + `laser channel`
@@ -106,7 +106,7 @@ Digital output line assignments, transcribed from the front-panel labels:
 
 ---
 
-## 📧 Email Notifications
+## Email Notifications
 
 The application can email a recipient list on key events via an SMTP client.
 
@@ -135,6 +135,6 @@ Key dependencies (auto-listed under the project's **Dependencies**): Hamamatsu V
 
 ---
 
-## 📬 Contact
+## Contact
 
-For questions about the Flow Zoometry system, please contact hanqing-wang@g.ecc.u-tokyo.ac.jp.
+For questions about the flow zoometry software, please contact peterson@flyworks.co.jp.
