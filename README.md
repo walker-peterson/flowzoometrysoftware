@@ -12,7 +12,7 @@ It comprises three major components:
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 ```
 .
 ├── src/flyseg                  # Drosophila tissue segmentation (based on nnUNet v2 structure)
