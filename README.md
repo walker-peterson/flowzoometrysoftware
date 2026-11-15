@@ -1,10 +1,10 @@
 # 🧬 Flow Zoometry Code Suites
 
-This repository provides all the algorithm suites for **Flow Zoometry** 3D imaging platform.  
-It integrates three major components:
+This repository contains software relevant to **flow zoometry**.  
+It comprises three major components:
 
-- **Tissue segmentation** — high-accuracy pretrained segmenration models for *Drosophila* larval organs & body. 
-- **Drug screening and cancer model classification** — ensemble 3D-CNN models for PDAC tumor classification & drug efficacy evaluation.
+- **Tissue segmentation** — high-accuracy pre-trained segmentation models for *Drosophila* larval internal tissues & body. 
+- **PDAC drug screening classifier** — ensemble 3D-CNN models for PDAC tumor model fly classification & drug efficacy evaluation.
 - **LabVIEW integrated control system** — hardware automation for 3D imaging of cleared *Drosophila* larvae.
 
 > 📄 For methodology and experimental details, please refer to the preprint:  
@@ -21,22 +21,22 @@ It integrates three major components:
 └── README.md                # Instruction documentation (this file)
 ```
 
-> Each subfolder contains its own **README.md** for setup and usage instructions.
+> Each subdirectory contains its own **README.md** for setup and usage instructions.
 
 ---
 
-## ① FlySeg — Drosophila Tissue Segmentation (nnUNet v2)
+## ① FlySeg — Drosophila tissue segmentation (nnUNet v2)
 
 ### Overview
-**FlySeg** is a modular, pretrained segmentation pipeline designed for *Drosophila* larval tissue segmentation using the **nnUNet v2** framework.  
+**FlySeg** is a modular, pre-trained segmentation pipeline designed for *Drosophila* larval tissue segmentation using the **nnUNet v2** framework.  
 It automates 3D fluorescence image processing, segmentation, and statistical quantification with high reproducibility and accuracy.
 
 ### Supported Tissues
 The flyseg model currently support high-accuracy segmentation for the following larval tissues:
-- **Brain / Central nervous system (CNS)**  
-- **Wing disc**  
-- **Haltere disc**  
-- **Salivary gland**  
+- **Central nervous system (CNS)**  
+- **Wing disc (left and right)**  
+- **Haltere disc (left and right)**  
+- **Salivary gland (left and right)**  
 - **Proventriculus**  
 - **Body (whole contour)**  
 
@@ -49,14 +49,14 @@ The flyseg model currently support high-accuracy segmentation for the following 
 
 ### Typical Workflow
 1. Convert `.h5` 3D imaging data into nnUNet-compatible format.  
-2. Run segmentation using pretrained tissue-specific models.  
+2. Run segmentation using pre-trained tissue-specific models.  
 3. Generate `.nii.gz` masks and extract volumetric/morphological statistics.
 
 > 📘 See `FlySeg/README.md` for installation, pretrained weights, and command examples.
 
 ---
 
-## ② FlyDrugScreening — PDAC Drug Efficacy Classification (3D-CNN)
+## ② FlyDrugScreening — PDAC drug candidate efficacy classification (3D-CNN)
 
 ### Overview
 **FlyDrugScreening** provides a 3D convolutional neural network (3D-CNN)–based framework to quantify tumor morphology and evaluate drug efficacy in a *Drosophila* PDAC (pancreatic ductal adenocarcinoma) model.  
@@ -100,7 +100,7 @@ A **LabView-based graphical control system** enabling real-time automation and s
 ### Integrated Modules
 - **Laser** – wavelength and power modulation  
 - **Camera** – acquisition triggering and synchronization  
-- **ETL (Electrically Tunable Lens)** – dynamic focal plane adjustment  
+- **ETL (Electrotunable lens)** – dynamic focal plane adjustment  
 - **Pump** – fluidic control and timing  
 - **Stage** – motorized positioning system  
 - **Robot arm** – automated sample handling
@@ -117,8 +117,8 @@ A **LabView-based graphical control system** enabling real-time automation and s
 
 ## 📬 Contact
 
-- **Code Maintainer:** Chenglang Hu, Walker Peterson, Md Al Mehedi Hasan, Hanqin Wang
-- **Email:** hu-chenglang@g.ecc.u-tokyo.ac.jp  
-- **Issues & Contributions:** please cite the paper for your kind usage of the codes.
+- **Code Maintainer:** Walker Peterson, Chenglang Hu, Md Al Mehedi Hasan
+- **Email:** peterson@flyworks.co.jp  
+- **Issues & Contributions:** please cite our paper if you use the code herein.
 bioRxiv: 10.1101/2024.04.04.588032v1](https://www.biorxiv.org/content/10.1101/2024.04.04.588032v1)
 
