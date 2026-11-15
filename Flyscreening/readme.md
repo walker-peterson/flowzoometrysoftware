@@ -6,7 +6,7 @@ It performs ensemble-based 3D CNN inference using 23 trained models (MC3-18 arch
 
 ---
 
-## 📁 Folder Structure
+## Folder Structure
 
 ```
 FlyDrugscreening/
