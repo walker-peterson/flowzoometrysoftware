@@ -1,4 +1,4 @@
-# 🧬 FlyDrugScreening
+# FlyDrugScreening
 
 This repository presents **FlyDrugScreening**, a 3D convolutional neural network (3D-CNN)–based framework designed to quantify **tumor morphology** and evaluate **drug efficacy** in a *Drosophila* model of **pancreatic ductal adenocarcinoma (PDAC)**.  
 
@@ -26,7 +26,7 @@ FlyDrugscreening/
 
 ---
 
-## 🧩 Input Data Preparation
+## Input Data Preparation
 
 All **test sample images** must be stored inside a folder named **`samples/`**, located in the same directory as `main.py`.
 
@@ -37,7 +37,7 @@ All **test sample images** must be stored inside a folder named **`samples/`**, 
 Each `.h5` file is treated as a single 3D test sample for inference.
 ---
 
-## 🧠 Models Folder
+## Models Folder
 
 All trained model are stored in **`models/`**.
 
@@ -48,7 +48,7 @@ All trained model are stored in **`models/`**.
 
 
 
-### 📈 Output Results
+### Output Results
 
 Example output file `test_result.csv`:
 ```csv
@@ -59,7 +59,7 @@ samples/sample_002.h5,0.1485
 
 ---
 
-## 🧰 Installation
+## Installation
 
 Clone this repository and install all dependencies using the included `requirements.txt` file.
 
@@ -69,7 +69,7 @@ cd FlyDrugScreening
 pip install --index-url https://download.pytorch.org/whl/cu124 -r requirements.txt
 ```
 
-## ▶️ Running the Program
+## Running the Program
 
 From the project root directory:
 ```bash
