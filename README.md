@@ -1,4 +1,4 @@
-# 🧬 Flow Zoometry Code Suites
+# Flow Zoometry Code Suites
 
 This repository contains software relevant to **flow zoometry**.  
 It comprises three major components:
@@ -52,7 +52,7 @@ The flyseg model currently support high-accuracy segmentation for the following 
 2. Run segmentation using pre-trained tissue-specific models.  
 3. Generate `.nii.gz` masks and extract volumetric/morphological statistics.
 
-> 📘 See `FlySeg/README.md` for installation, pretrained weights, and command examples.
+> See `FlySeg/README.md` for installation, pretrained weights, and command examples.
 
 ---
 
