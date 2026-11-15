@@ -1,23 +1,23 @@
-# FlySeg 🧬🍃
+# FlySeg
 
-**FlySeg** is a pretrained, modular image segmentation pipeline tailored for *Drosophila* tissue segmentation using the [nnUNet v2](https://github.com/MIC-DKFZ/nnUNet) framework.  
+**FlySeg** is a pre-trained, modular image segmentation pipeline tailored for *Drosophila* tissue segmentation using the [nnUNet v2](https://github.com/MIC-DKFZ/nnUNet) framework.  
 
-It enables automated processing and segmentation of `.h5` 3D fluorescence imaging data for multiple target tissues, generating postprocessed `.nii.gz` segmentation masks and statistical outputs in a streamlined and reproducible workflow.  
-
----
-
-## ✨ Features
-
-- ✅ End-to-end nnUNet v2 inference pipeline  
-- ✅ Automated preprocessing: `.h5 → .nii.gz` (Otsu thresholding + Gaussian smoothing + 3D masking)  
-- ✅ Automatic environment setup and inference execution  
-- ✅ Postprocessing with label cleanup and statistics  
-- ✅ High-performance multi-threaded image processing  
-- ✅ Command-line interface with flexible arguments  
+It enables automated processing and segmentation of `.h5` 3D fluorescence imaging data for multiple target tissues, generating post-processed `.nii.gz` segmentation masks and statistical outputs in a streamlined and reproducible workflow.  
 
 ---
 
-## 📦 Installation
+## Features
+
+- End-to-end nnUNet v2 inference pipeline  
+- Automated preprocessing: `.h5 → .nii.gz` (Otsu thresholding + Gaussian smoothing + 3D masking)  
+- Automatic environment setup and inference execution  
+- Post-processing with label cleanup and statistics  
+- High-performance multi-threaded image processing  
+- Command-line interface with flexible arguments  
+
+---
+
+## Installation
 
 1. **Install via pip:**
 ```bash
@@ -31,7 +31,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🚀 Usage Example
+## Usage Example
 
 ```bash
 python -m flyseg.scripts.prediction  --input "***\test"   --output "***\prediction"   --application Segmentation   --info Control   --date 20260415   --organ CNS
@@ -49,9 +49,9 @@ python -m flyseg.scripts.prediction  --input "***\test"   --output "***\predicti
 
 ---
 
-## 🔧 Maintenance & Cleanup
+## Maintenance & Cleanup
 
-If the pretrained model or installed package becomes corrupted, outdated, or you need to free up space, run:  
+If the pre-trained model or installed package becomes corrupted, outdated, or you need to free up space, run:  
 
 ```bash
 flyseg-clean-model
@@ -61,7 +61,7 @@ This will remove the cached `pretrained_model/` folder.
 
 ---
 
-## 📂 Output Data Structure (Example)
+## Output Data Structure (Example)
 
 ```text
 output_dir/
@@ -79,7 +79,7 @@ output_dir/
 
 ---
 
-## 💪 Full Uninstallation
+## Full Uninstallation
 
 To completely remove FlySeg and its cached model files:  
 
@@ -105,6 +105,6 @@ flowchart LR
 ```
 ---
 
-## 📬 Contact
+## Contact
 For questions or suggestions, please contact:  
-Email: **huchenglang123@gmail.com**
+Email: **peterson@flyworks.co.jp**
