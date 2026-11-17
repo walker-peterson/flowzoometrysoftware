@@ -4,8 +4,8 @@ import gdown
 import shutil
 
 # === 路径配置 ===
-PROJECT_ROOT = os.path.abspath(os.getcwd())
-MODEL_DIR = os.path.join(PROJECT_ROOT, "pretrained_model")
+from pathlib import Path
+MODEL_DIR = str(Path.home() / ".flyseg" / "pretrained_model")
 MODEL_ZIP = os.path.join(MODEL_DIR, "pretrained_model.zip")
 
 NNUNET_BASE = os.path.join(MODEL_DIR, "pretrained_model", "nnUNet")
