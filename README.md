@@ -1,4 +1,4 @@
-# Flow Zoometry Code Suites
+# Flow zoometry software
 
 This repository contains software relevant to **flow zoometry**.  
 It comprises three major components:
@@ -7,7 +7,7 @@ It comprises three major components:
 - **PDAC drug screening classifier** — ensemble 3D-CNN models for PDAC tumor model fly classification & drug efficacy evaluation.
 - **LabVIEW integrated control system** — hardware automation for 3D imaging of cleared *Drosophila* larvae.
 
-> 📄 For methodology and experimental details, please refer to the preprint:  
+> For methodology and experimental details, please refer to our pre-print and subsequent publication:  
 > [bioRxiv: 10.1101/2024.04.04.588032v1](https://www.biorxiv.org/content/10.1101/2024.04.04.588032v1)
 
 ---
@@ -88,7 +88,7 @@ FlyDrugScreening/
   samples/sample_002.h5,0.1485
   ```
 
-> 📄 Detailed model loading, ensemble weighting, and visualization are described in `FlyDrugScreening/README.md`.
+> Detailed model loading, ensemble weighting, and visualization are described in `FlyDrugScreening/README.md`.
 
 ---
 
@@ -111,14 +111,14 @@ A **LabView-based graphical control system** enabling real-time automation and s
 - Real-time logging and metadata recording  
 - Modular architecture for easy extension to new devices  
 
-> 🔧 For environment setup, hardware requirements, and workflow configuration, see `LabVIEW-Control/README.md`.
+> For environment setup, hardware requirements, and workflow configuration, see `LabVIEW-Control/README.md`.
 
 ---
 
-## 📬 Contact
+## Contact
 
-- **Code Maintainer:** Walker Peterson, Chenglang Hu, Md Al Mehedi Hasan
-- **Email:** peterson@flyworks.co.jp  
+- **Primary code maintainer:** Walker Peterson
+- **Email:** peterson@g.ecc.u-tokyo.ac.jp, peterson@flyworks.co.jp  
 - **Issues & Contributions:** please cite our paper if you use the code herein.
 bioRxiv: 10.1101/2024.04.04.588032v1](https://www.biorxiv.org/content/10.1101/2024.04.04.588032v1)
 
