@@ -49,18 +49,6 @@ python -m flyseg.scripts.prediction  --input "***\test"   --output "***\predicti
 
 ---
 
-## Maintenance & Cleanup
-
-If the pre-trained model or installed package becomes corrupted, outdated, or you need to free up space, run:  
-
-```bash
-flyseg-clean-model
-```
-
-This will remove the cached `pretrained_model/` folder.  
-
----
-
 ## Output Data Structure (Example)
 
 ```text
